@@ -1,0 +1,6 @@
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 2\TPFinalNivel2_Altamiranda\Dominio\bin\Debug\Dominio.dll
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 2\TPFinalNivel2_Altamiranda\Dominio\bin\Debug\Dominio.pdb
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 2\TPFinalNivel2_Altamiranda\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 2\TPFinalNivel2_Altamiranda\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 2\TPFinalNivel2_Altamiranda\Dominio\obj\Debug\Dominio.dll
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 2\TPFinalNivel2_Altamiranda\Dominio\obj\Debug\Dominio.pdb
