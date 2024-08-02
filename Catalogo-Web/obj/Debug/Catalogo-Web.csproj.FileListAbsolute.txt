@@ -57,3 +57,7 @@ D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\obj\Debug\Catalo
 D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\obj\Debug\Catalogo.1EF9A6BD.Up2Date
 D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\obj\Debug\Catalogo-Web.dll
 D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\obj\Debug\Catalogo-Web.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\bin\Dominio.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\bin\Negocio.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\bin\Dominio.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\bin\Negocio.pdb

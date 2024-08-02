@@ -1,0 +1,2 @@
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\obj\Release\Catalogo-Web.csproj.AssemblyReference.cache
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\obj\Release\Catalogo-Web.csproj.CoreCompileInputs.cache

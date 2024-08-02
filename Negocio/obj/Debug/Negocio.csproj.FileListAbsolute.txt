@@ -16,3 +16,12 @@ D:\Lucas\proyecto .net\TPFinalNivel2_Altamiranda\Negocio\obj\Debug\Negocio.cspro
 D:\Lucas\proyecto .net\TPFinalNivel2_Altamiranda\Negocio\obj\Debug\Negocio.csproj.Up2Date
 D:\Lucas\proyecto .net\TPFinalNivel2_Altamiranda\Negocio\obj\Debug\Negocio.dll
 D:\Lucas\proyecto .net\TPFinalNivel2_Altamiranda\Negocio\obj\Debug\Negocio.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\bin\Debug\Negocio.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\bin\Debug\Negocio.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\bin\Debug\Dominio.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\bin\Debug\Dominio.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Debug\Negocio.csproj.Up2Date
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Debug\Negocio.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Debug\Negocio.pdb

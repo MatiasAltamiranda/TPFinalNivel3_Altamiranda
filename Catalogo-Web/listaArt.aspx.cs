@@ -1,9 +1,11 @@
 ﻿using System;
+using Negocio;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 
 namespace Catalogo_Web
 {
@@ -11,7 +13,9 @@ namespace Catalogo_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+          ArticuloNegocio negocio = new ArticuloNegocio();
+          DgvArticulos.DataSource = negocio.listar();
+          DgvArticulos.DataBind();
         }
     }
 }

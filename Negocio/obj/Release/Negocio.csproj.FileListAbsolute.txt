@@ -1,0 +1,9 @@
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\bin\Release\Negocio.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\bin\Release\Negocio.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\bin\Release\Dominio.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\bin\Release\Dominio.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Release\Negocio.csproj.AssemblyReference.cache
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Release\Negocio.csproj.CoreCompileInputs.cache
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Release\Negocio.csproj.Up2Date
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Release\Negocio.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Negocio\obj\Release\Negocio.pdb
