@@ -7,7 +7,7 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="container">
         <div class="row mt-5">
-            <div class="col-6">
+            <div class="col-md-6 col-12 ">
                 <div class="mb-3">
                     <label class="form-label" for="txtID">ID</label>
                     <asp:TextBox runat="server" CssClass="form-control" ID="txtID" />
@@ -34,24 +34,51 @@
                 </div>
                 <div class="mb-3">
                     <asp:Button Text="Aceptar" ID="btnAceptar" runat="server" CssClass="btn btn-success" OnClick="btnAceptar_Click" />
-                    <a href="listaArt.aspx">Cancelar</a>
+                    <a class="mx-3" href="listaArt.aspx">Cancelar</a>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <div class="mb-3">
                     <label class="form-label" for="txtDescripcion">Descripcion</label>
                     <asp:TextBox runat="server" TextMode="MultiLine" CssClass="form-control" ID="txtDescripcion" />
-                </div>  
+                </div>
                 <asp:UpdatePanel ID="UpdatePanel" runat="server">
                     <ContentTemplate>
-                         <div class="mb-3">
-                              <label class="form-label" for="txtUrlImagen">Url Imagen</label>
-                             <asp:TextBox runat="server" ID="txtUrlImagen" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtUrlImagen_TextChanged" />
-                         </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtUrlImagen">Url Imagen</label>
+                            <asp:TextBox runat="server" ID="txtUrlImagen" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtUrlImagen_TextChanged" />
+                        </div>
                         <asp:Image ImageUrl="https://www.italfren.com.ar/images/catalogo/imagen-no-disponible.jpeg" runat="server" ID="imgArticulo" Width="60%" Height="400px" />
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
         </div>
+        <%
+            //CONDICION EVALUA SI SE TRATA DE UN ARTICULI PRECARGADO PARA NO RENDERIZAR BOTON DE ELIMINAR EN EL CASO DE AGREGAR UN PRODUCTO NUEVO
+            if(Request.QueryString["id"] != null) { %>
+        <div class="row text-end">
+            <div class="col-12 col-md-6">
+                <asp:UpdatePanel ID="updatePanel2" runat="server">
+                    <ContentTemplate>
+                        <div class="mb-3">
+                            <asp:Button Text="Eliminar" ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" CssClass="btn btn-danger" />
+                        </div>
+
+                        <%if (ConfirmaEliminacion)
+                            {
+
+                        %>
+
+                        <div class="mb-3">
+                            <asp:CheckBox Text="Esta por eliminar el articulo. ¿Esta seguro? " ID="confirmaEliminar" runat="server" />
+                            <asp:Button Text="Confirmar" ID="btnConfirmaEliminar" OnClick="btnConfirmaEliminar_Click" runat="server" CssClass="btn btn-outline-danger" />
+                        </div>
+
+                        <% } %>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+        </div>
+  <%  } %>
     </div>
 </asp:Content>

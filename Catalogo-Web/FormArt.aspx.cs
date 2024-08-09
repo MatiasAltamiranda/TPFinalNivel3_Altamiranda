@@ -11,9 +11,11 @@ namespace Catalogo_Web
 {
     public partial class FormArt : System.Web.UI.Page
     {
+        public bool ConfirmaEliminacion { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             txtID.Enabled = false;
+            ConfirmaEliminacion = false;
             try
             {
                 if (!IsPostBack)
@@ -103,8 +105,8 @@ namespace Catalogo_Web
 
                 if (Request.QueryString["id"] != null)
                 // MODIFICA EL ARTICULO EN LA BASE DE DATOS
-                { 
-                    nuevoArt.Id= int.Parse(txtID.Text);
+                {
+                    nuevoArt.Id = int.Parse(txtID.Text);
                     articuloNegocio.modificar(nuevoArt);
                 }
 
@@ -116,6 +118,31 @@ namespace Catalogo_Web
             catch (Exception ex)
             {
 
+                Session.Add("Error", ex);
+                throw ex;
+            }
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //CAMBIA EL ESTADO DE CONFIRMAELIMINACION PARA PODER RENDERIZAR EN PANTALLA EL BOTON DE CONFIRMAR ELIMINADO
+            ConfirmaEliminacion = true;
+        }
+
+        protected void btnConfirmaEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //CONFIRMA CHECKED EN TRUE PARA REALIZAR DELETE
+                if (confirmaEliminar.Checked)
+                {
+                    ArticuloNegocio negocio = new ArticuloNegocio();
+                    negocio.eliminar(int.Parse(txtID.Text));
+                    Response.Redirect("listaArt.aspx");
+                }
+            }
+            catch (Exception ex)
+            {
                 Session.Add("Error", ex);
                 throw ex;
             }
