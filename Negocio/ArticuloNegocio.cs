@@ -11,16 +11,23 @@ namespace Negocio
 {
     public class ArticuloNegocio
     {
-        public List<Articulo> listar()
+        public List<Articulo> listar(string id="")
         { 
 
         List<Articulo> listaArticulos = new List<Articulo>();
         ConexionDB conexionDB = new ConexionDB();
 
-
             try
             {
-                conexionDB.setearConsulta("select A.Id,Codigo,Nombre,A.Descripcion,M.Descripcion Marca,C.Descripcion Categoria,ImagenUrl, Precio,C.id IdCategoria,M.Id IdMarca from ARTICULOS A, CATEGORIAS C, MARCAS M Where A.IdCategoria = C.Id and A.IdMarca = M.Id");
+                if(id!= "")
+                {
+                    conexionDB.setearConsulta("select A.Id,Codigo,Nombre,A.Descripcion,M.Descripcion Marca,C.Descripcion Categoria,ImagenUrl, Precio,C.id IdCategoria,M.Id IdMarca from ARTICULOS A, CATEGORIAS C, MARCAS M Where A.IdCategoria = C.Id and A.IdMarca = M.Id and A.Id= " + id);
+                }
+                else
+                {
+                    conexionDB.setearConsulta("select A.Id,Codigo,Nombre,A.Descripcion,M.Descripcion Marca,C.Descripcion Categoria,ImagenUrl, Precio,C.id IdCategoria,M.Id IdMarca from ARTICULOS A, CATEGORIAS C, MARCAS M Where A.IdCategoria = C.Id and A.IdMarca = M.Id");
+                }
+
                 conexionDB.ejecutarLectura();
                 while (conexionDB.Lector.Read())
                 {

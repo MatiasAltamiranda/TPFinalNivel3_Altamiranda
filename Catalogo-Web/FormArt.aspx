@@ -48,7 +48,7 @@
                               <label class="form-label" for="txtUrlImagen">Url Imagen</label>
                              <asp:TextBox runat="server" ID="txtUrlImagen" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtUrlImagen_TextChanged" />
                          </div>
-                        <asp:Image ImageUrl="https://www.italfren.com.ar/images/catalogo/imagen-no-disponible.jpeg" runat="server" ID="imgArticulo" Width="60%" />
+                        <asp:Image ImageUrl="https://www.italfren.com.ar/images/catalogo/imagen-no-disponible.jpeg" runat="server" ID="imgArticulo" Width="60%" Height="400px" />
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
