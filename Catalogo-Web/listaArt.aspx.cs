@@ -12,13 +12,18 @@ namespace Catalogo_Web
 {
     public partial class listaArt : System.Web.UI.Page
     {
+
+        public bool FiltroAvanzado { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             //TRAIGO LOS ARTICULOS DE LA BASE DE DATOS Y LOS GUARDO EN SESION PARA MOSTRARLOS EN LA LISTA DEL FRONT
+            if (!IsPostBack) { 
+            FiltroAvanzado = false;
             ArticuloNegocio negocio = new ArticuloNegocio();
             Session.Add("listaArticulos", negocio.listar());
             dgvArticulos.DataSource = Session["listaArticulos"];
             dgvArticulos.DataBind();
+            }
         }
 
         protected void dgvArticulos_SelectedIndexChanged(object sender, EventArgs e)
@@ -35,6 +40,44 @@ namespace Catalogo_Web
             //ACTUALIZO LA LISTA DE ARTICULOS EN EL FRONT CON LA NUEVA LISTA FILTRADA
             dgvArticulos.DataSource = listaFiltrada;
             dgvArticulos .DataBind();
+        }
+
+        protected void filtroAvanzado_CheckedChanged(object sender, EventArgs e)
+        {
+            FiltroAvanzado = chbAvanzado.Checked;
+            txtFiltro.Enabled = !FiltroAvanzado;
+        }
+
+        protected void ddlCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ddlCriterio.Items.Clear();
+            if(ddlCampo.SelectedItem.ToString() == "Precio")
+            {
+                ddlCriterio.Items.Add("Igual a");
+                ddlCriterio.Items.Add("Mayor a");
+                ddlCriterio.Items.Add("Menor a");
+            }
+            else
+            {
+                ddlCriterio.Items.Add("Contiene");
+                ddlCriterio.Items.Add("Termina con");
+                ddlCriterio.Items.Add("Comienza con");
+            }
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                dgvArticulos.DataSource = negocio.filtrar(ddlCampo.SelectedItem.ToString(), ddlCriterio.SelectedItem.ToString(), txtFiltroAvanzado.Text); 
+                dgvArticulos .DataBind();
+            }
+            catch (Exception ex)
+            {
+                Session.Add("error", ex);
+                throw ex;
+            }
         }
     }
 }
