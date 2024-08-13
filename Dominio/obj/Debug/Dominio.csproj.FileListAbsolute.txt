@@ -10,3 +10,9 @@ D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Dominio\obj\Debug\Dominio.csp
 D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Dominio\obj\Debug\Dominio.dll
 D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Dominio\obj\Debug\Dominio.pdb
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Dominio\bin\Debug\Dominio.dll
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Dominio\bin\Debug\Dominio.pdb
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Dominio\obj\Debug\Dominio.dll
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Dominio\obj\Debug\Dominio.pdb

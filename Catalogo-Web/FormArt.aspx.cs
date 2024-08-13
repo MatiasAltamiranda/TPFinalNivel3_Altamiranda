@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
+using Helper;
 using Negocio;
 
 namespace Catalogo_Web
@@ -14,6 +15,11 @@ namespace Catalogo_Web
         public bool ConfirmaEliminacion { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Seguridad.isAdmin(Session["sessionActiva"]))
+            {
+                Response.Redirect("Default.aspx", false);
+            }
+
             txtID.Enabled = false;
             ConfirmaEliminacion = false;
             try

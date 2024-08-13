@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
+using Helper;
 
 
 namespace Catalogo_Web
@@ -16,6 +17,11 @@ namespace Catalogo_Web
         public bool FiltroAvanzado { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Seguridad.isAdmin(Session["sessionActiva"]))
+            {
+                Response.Redirect("Default.aspx", false);
+            }
+
             //TRAIGO LOS ARTICULOS DE LA BASE DE DATOS Y LOS GUARDO EN SESION PARA MOSTRARLOS EN LA LISTA DEL FRONT
             if (!IsPostBack) { 
             FiltroAvanzado = false;

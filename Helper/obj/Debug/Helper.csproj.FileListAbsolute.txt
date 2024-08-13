@@ -1,0 +1,9 @@
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\bin\Debug\Helper.dll
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\bin\Debug\Helper.pdb
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\bin\Debug\Dominio.dll
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\bin\Debug\Dominio.pdb
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\obj\Debug\Helper.csproj.AssemblyReference.cache
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\obj\Debug\Helper.csproj.CoreCompileInputs.cache
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\obj\Debug\Helper.csproj.Up2Date
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\obj\Debug\Helper.dll
+D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\obj\Debug\Helper.pdb

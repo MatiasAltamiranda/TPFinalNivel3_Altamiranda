@@ -32,5 +32,34 @@ namespace Negocio
                 conexionDB.cerrarConexion();
             }
         }
+
+        public bool login(Usuario usuario)
+        {
+            ConexionDB conexionDB= new ConexionDB();
+
+            try
+            {
+                conexionDB.setearConsulta("select id, email,pass,admin from USERS where email=@email and pass = @pass");
+                conexionDB.setearParametro("@email", usuario.Email);
+                conexionDB.setearParametro("@pass", usuario.Pass);
+                conexionDB.ejecutarLectura();
+                if (conexionDB.Lector.Read())
+                {
+                    usuario.Id = (int)conexionDB.Lector["id"];
+                    usuario.Admin = (bool)conexionDB.Lector["admin"];
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexionDB.cerrarConexion();
+            }
+        }
     }
 }

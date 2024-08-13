@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,12 @@ namespace Catalogo_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!(Page is Login || Page is Default || Page is Registro)) { 
+            if (Seguridad.sessionActiva(Session["sessionActiva"]))
+            {
+                Response.Redirect("Login.aspx", false);
+            }
+            }
         }
     }
 }
