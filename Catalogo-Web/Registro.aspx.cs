@@ -18,24 +18,33 @@ namespace Catalogo_Web
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
-            try
+            if (txtPass.Text == txtPassRepet.Text)
             {
-                Usuario user = new Usuario();
-                UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
 
-                user.Nombre = txtNombre.Text;
-                user.Apellido = txtApellido.Text;
-                user.Email = txtEmail.Text;
-                user.Pass = txtPass.Text;
+                try
+                {
+                    Usuario user = new Usuario();
+                    UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
 
-                int id = usuarioNegocio.registrarUsuario(user);
+                    user.Nombre = txtNombre.Text;
+                    user.Apellido = txtApellido.Text;
+                    user.Email = txtEmail.Text;
+                    user.Pass = txtPass.Text;
 
-                Response.Redirect("Default.aspx", false);
+                    int id = usuarioNegocio.registrarUsuario(user);
+
+                    Response.Redirect("Default.aspx", false);
+                }
+                catch (Exception ex)
+                {
+                    Session.Add("error", ex.ToString());
+                }
             }
-            catch (Exception ex)
+            else
             {
-                Session.Add("error", ex.ToString());
+                labelConfirm.Text = "Las contraseñas no coinciden"; 
             }
+
         }
     }
 }

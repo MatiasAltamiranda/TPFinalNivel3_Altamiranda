@@ -29,9 +29,13 @@
                     <asp:TextBox runat="server" CssClass="form-control" ID="txtPass" PlaceHolder="Ingresa una contraseña" TextMode="Password"></asp:TextBox>
                 </div>
 
+                <div class="mb-4 text-start">
+                    <label class="form-label fs-5 lead text-white" for="txtPassRepet">Repetir Contraseña</label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtPassRepet" PlaceHolder="Repite la contraseña" TextMode="Password"></asp:TextBox>
+                </div>
                 <asp:Button Text="Registrarse" runat="server" CssClass="btn btn-light mt-4 w-100 fs-5" ID="btnRegistro" OnClick="btnRegistro_Click" />
-
             </div>
+            <asp:Label Text="" runat="server" ID="labelConfirm" CssClass="text-danger fw-bold mt-3" />
             <div class="col-4"></div>
         </div>
     </div>
