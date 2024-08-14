@@ -80,7 +80,7 @@ namespace Negocio
             try
             {
                 conexionDB.setearConsulta("Update USERS set urlImagenPerfil =@imagen , nombre =@nombre, apellido=@apellido where id=@id");
-                conexionDB.setearParametro("@imagen", usuario.UrlImagen != null ? usuario.UrlImagen : "");
+                conexionDB.setearParametro("@imagen", (object)usuario.UrlImagen ?? DBNull.Value);
                 conexionDB.setearParametro("@nombre", usuario.Nombre);
                 conexionDB.setearParametro("@apellido", usuario.Apellido);
                 conexionDB.setearParametro("@id", usuario.Id);
