@@ -7,3 +7,12 @@ D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helpe
 D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\obj\Debug\Helper.csproj.Up2Date
 D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\obj\Debug\Helper.dll
 D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Helper\obj\Debug\Helper.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Helper\bin\Debug\Helper.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Helper\bin\Debug\Helper.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Helper\bin\Debug\Dominio.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Helper\bin\Debug\Dominio.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Helper\obj\Debug\Helper.csproj.AssemblyReference.cache
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Helper\obj\Debug\Helper.csproj.CoreCompileInputs.cache
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Helper\obj\Debug\Helper.csproj.Up2Date
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Helper\obj\Debug\Helper.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Helper\obj\Debug\Helper.pdb

@@ -126,3 +126,5 @@ D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Catal
 D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Catalogo-Web\obj\Debug\Catalogo-Web.pdb
 D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Catalogo-Web\bin\Helper.dll
 D:\Matias\Cursos\MaxiPrograma\Entrega proyecto 3\TPFinalNivel3_Altamiranda\Catalogo-Web\bin\Helper.pdb
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\bin\Helper.dll
+D:\Lucas\TPFinalNivel3_Altamiranda\Catalogo online\Catalogo-Web\bin\Helper.pdb

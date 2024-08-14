@@ -19,5 +19,11 @@ namespace Catalogo_Web
             }
             }
         }
+
+        protected void btnSalir_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("Default.aspx", false);
+        }
     }
 }
