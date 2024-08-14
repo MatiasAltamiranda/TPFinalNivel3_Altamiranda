@@ -22,7 +22,7 @@
                     <asp:TextBox runat="server" CssClass="form-control" ID="txtApellido" />
                 </div>
                 <div class="mb-3 mt-5">
-                    <asp:Button Text="Guardar" runat="server" CssClass="btn btn-primary" ID="btnGuardar" />
+                    <asp:Button Text="Guardar" runat="server" CssClass="btn btn-primary" ID="btnGuardar" onclick="btnGuardar_Click"/>
                 </div>
             </div>
             <div class="col-4">
@@ -30,7 +30,7 @@
                     <label class="form-label">Imagen de Perfil</label>
                     <input  type="file" id="txtImagen" runat="server" class="form-control"/>
                 </div>
-                <asp:Image ImageUrl="https://i.ytimg.com/vi/q98TimQmQ7s/maxresdefault.jpg" runat="server" ID="imgPerfil" CssClass="img-fluid mb-3 rounded-circle w-50 h-50 mx-5" />
+                <asp:Image ImageUrl="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" runat="server" ID="imgPerfil" CssClass="img-fluid mb-3 rounded-circle w-50 h-50 mx-5" />
             </div>
               <div class="col-3"></div>
         </div>

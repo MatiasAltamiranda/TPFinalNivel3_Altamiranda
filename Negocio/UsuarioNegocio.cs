@@ -39,7 +39,7 @@ namespace Negocio
 
             try
             {
-                conexionDB.setearConsulta("select id, email,pass,admin from USERS where email=@email and pass = @pass");
+                conexionDB.setearConsulta("select id, email,pass,admin,nombre,apellido,urlImagenPerfil from USERS where email=@email and pass = @pass");
                 conexionDB.setearParametro("@email", usuario.Email);
                 conexionDB.setearParametro("@pass", usuario.Pass);
                 conexionDB.ejecutarLectura();
@@ -47,9 +47,44 @@ namespace Negocio
                 {
                     usuario.Id = (int)conexionDB.Lector["id"];
                     usuario.Admin = (bool)conexionDB.Lector["admin"];
+                    if (!(conexionDB.Lector["nombre"] is DBNull))
+                    {
+                        usuario.Nombre = (string)conexionDB.Lector["nombre"];
+                    }
+                    if (!(conexionDB.Lector["Apellido"] is DBNull))
+                    {
+                        usuario.Apellido = (string)conexionDB.Lector["apellido"];
+                    }
+                    if (!(conexionDB.Lector["urlImagenPerfil"] is DBNull))
+                    {
+                        usuario.UrlImagen = (string)conexionDB.Lector["urlImagenPerfil"];
+                    }
                     return true;
                 }
                 return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexionDB.cerrarConexion();
+            }
+        }
+
+        public void actualizar(Usuario usuario)
+        {
+            ConexionDB conexionDB = new ConexionDB();
+            try
+            {
+                conexionDB.setearConsulta("Update USERS set urlImagenPerfil =@imagen , nombre =@nombre, apellido=@apellido where id=@id");
+                conexionDB.setearParametro("@imagen", usuario.UrlImagen != null ? usuario.UrlImagen : "");
+                conexionDB.setearParametro("@nombre", usuario.Nombre);
+                conexionDB.setearParametro("@apellido", usuario.Apellido);
+                conexionDB.setearParametro("@id", usuario.Id);
+                conexionDB.ejecutarAccion();
             }
             catch (Exception ex)
             {
