@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Helper;
 using Negocio;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,13 @@ namespace Catalogo_Web
                 //EN EL USUARIO CREADO GUARDA LOS VALORES INGRESADOS DESDE LOS TEXTBOX
                 user.Email= txtEmail.Text;
                 user.Pass = txtPass.Text;
-                //EJECUTA EL LOGUEO SI EL USUARIO COINCIDE SE DIRECCIONA A LA PAGINA DE INICIO
+
+
+                //CONDICION CONTROLA SI LOS TEXTOS ESTAN VACIOS
+                if(!(Validacion.validarTextoVacio(user.Email) || Validacion.validarTextoVacio(user.Pass))) {
+                
+                    
+                 //EJECUTA EL LOGUEO SI EL USUARIO COINCIDE SE DIRECCIONA A LA PAGINA DE INICIO
                 if (usuarioNegocio.login(user))
                 {
                     Session.Add("sessionActiva", user);
@@ -37,6 +44,11 @@ namespace Catalogo_Web
                 else
                 {
                     labelLogin.Text = "Email o contraseña incorrecto";
+                }
+                }
+                else
+                {
+                    labelLogin.Text = "Los campos no pueden estar vacios";
                 }
             }
             catch (Exception ex)

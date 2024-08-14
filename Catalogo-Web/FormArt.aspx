@@ -10,37 +10,38 @@
             <div class="col-md-6 col-12 ">
                 <div class="mb-3">
                     <label class="form-label" for="txtID">ID</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtID" />
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtID"/>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="txtCodigo">Codigo</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtCodigo" />
+                    <label class="form-label" for="txtCodigo">Codigo</label><asp:Label Text="" runat="server" CssClass="text-danger  fw-bold" ID="obligatorioTextCodigo" />
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtCodigo" required="true"  />
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="txtNombre">Nombre</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtNombre" />
+                    <label class="form-label" for="txtNombre">Nombre</label><asp:Label Text="" runat="server" CssClass="text-danger  fw-bold" ID="obligatorioTextNombre" />
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtNombre" required="true"/>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="ddlMarca">Marca</label>
-                    <asp:DropDownList runat="server" ID="ddlMarca" CssClass="form-select"></asp:DropDownList>
+                    <label class="form-label" for="ddlMarca">Marca</label><asp:Label Text="" runat="server" CssClass="text-danger  fw-bold" ID="obligatorioTextMarca" />
+                    <asp:DropDownList runat="server" ID="ddlMarca" CssClass="form-select" required="true"></asp:DropDownList>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="ddlCategoria">Categoria</label>
-                    <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-select"></asp:DropDownList>
+                    <label class="form-label" for="ddlCategoria">Categoria</label><asp:Label Text="" runat="server" CssClass="text-danger  fw-bold" ID="obligatorioTextCategoria" />
+                    <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-select" required="true"></asp:DropDownList>
                 </div>
                 <div class="mb-4">
-                    <label class="form-label" for="txtPrecio">Precio</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtPrecio" />
+                    <label class="form-label" for="txtPrecio">Precio</label><asp:Label Text="" runat="server" CssClass="text-danger  fw-bold" ID="obligatorioTextPrecio" />
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtPrecio" required="true"/>
                 </div>
                 <div class="mb-3">
                     <asp:Button Text="Aceptar" ID="btnAceptar" runat="server" CssClass="btn btn-success" OnClick="btnAceptar_Click" />
                     <a class="mx-3" href="listaArt.aspx">Cancelar</a>
                 </div>
+                 <asp:Label Text="" runat="server" ID="lblCamposVacios" CssClass="text-danger fs-5"/>
             </div>
             <div class="col-12 col-md-6">
                 <div class="mb-3">
-                    <label class="form-label" for="txtDescripcion">Descripcion</label>
-                    <asp:TextBox runat="server" TextMode="MultiLine" CssClass="form-control" ID="txtDescripcion" />
+                    <label class="form-label" for="txtDescripcion">Descripcion</label><asp:Label Text="" runat="server" CssClass="text-danger fw-bold" ID="obligatorioTextDescripcion" />
+                    <asp:TextBox runat="server" TextMode="MultiLine" CssClass="form-control" ID="txtDescripcion" required="true" />
                 </div>
                 <asp:UpdatePanel ID="UpdatePanel" runat="server">
                     <ContentTemplate>

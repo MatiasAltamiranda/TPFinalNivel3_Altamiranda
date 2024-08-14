@@ -12,12 +12,12 @@
 
                 <div class="mb-3 text-start">
                     <label class="form-label fs-5 lead text-white" for="txtEmail">Email</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" TextMode="Email" PlaceHolder="Ingresa tu dirección de correo electronico"></asp:TextBox>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" TextMode="Email" required="true" PlaceHolder="Ingresa tu dirección de correo electronico"></asp:TextBox>
                 </div>
 
                 <div class="mb-4 text-start">
                     <label class="form-label fs-5 lead text-white" for="txtPass">Contraseña</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtPass" PlaceHolder="Ingresa una contraseña" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtPass" PlaceHolder="Ingresa una contraseña" required="true" TextMode="Password"></asp:TextBox>
                 </div>
 
                 <asp:Button Text="Ingresar" runat="server" CssClass="btn btn-light mt-4 w-100 fs-5" ID="btnLoguearse" OnClick="btnLoguearse_Click"/>

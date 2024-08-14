@@ -90,42 +90,55 @@ namespace Catalogo_Web
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // CREA UN ARTICULO NUEVO Y RELLENA CON LOS DATOS DE LOS TEXTBOX
-                Articulo nuevoArt = new Articulo();
-                ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-                nuevoArt.Codigo = txtCodigo.Text;
-                nuevoArt.Nombre = txtNombre.Text;
-                nuevoArt.Descripcion = txtDescripcion.Text;
-                nuevoArt.Precio = decimal.Parse(txtPrecio.Text);
-                nuevoArt.ImagenUrl = txtUrlImagen.Text;
-
-                nuevoArt.Marca = new Marca();
-                nuevoArt.Marca.Id = int.Parse(ddlMarca.SelectedValue);
-
-                nuevoArt.Categoria = new Categoria();
-                nuevoArt.Categoria.Id = int.Parse(ddlCategoria.SelectedValue);
-
-                //EVALUA SI SE ESTA AGREGANDO O MODIFICANDO UN ARTICULO
-
-                if (Request.QueryString["id"] != null)
-                // MODIFICA EL ARTICULO EN LA BASE DE DATOS
+            if (!(Validacion.validarTextoVacio(txtCodigo.Text) || Validacion.validarTextoVacio(txtNombre.Text) || Validacion.validarTextoVacio(txtPrecio.Text) || Validacion.validarTextoVacio(txtDescripcion.Text)))
                 {
-                    nuevoArt.Id = int.Parse(txtID.Text);
-                    articuloNegocio.modificar(nuevoArt);
+                try
+                {
+                    // CREA UN ARTICULO NUEVO Y RELLENA CON LOS DATOS DE LOS TEXTBOX
+                    Articulo nuevoArt = new Articulo();
+                    ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+                    nuevoArt.Codigo = txtCodigo.Text;
+                    nuevoArt.Nombre = txtNombre.Text;
+                    nuevoArt.Descripcion = txtDescripcion.Text;
+                    nuevoArt.Precio = decimal.Parse(txtPrecio.Text);
+                    nuevoArt.ImagenUrl = txtUrlImagen.Text;
+
+                    nuevoArt.Marca = new Marca();
+                    nuevoArt.Marca.Id = int.Parse(ddlMarca.SelectedValue);
+
+                    nuevoArt.Categoria = new Categoria();
+                    nuevoArt.Categoria.Id = int.Parse(ddlCategoria.SelectedValue);
+
+                    //EVALUA SI SE ESTA AGREGANDO O MODIFICANDO UN ARTICULO
+
+                    if (Request.QueryString["id"] != null)
+                    // MODIFICA EL ARTICULO EN LA BASE DE DATOS
+                    {
+                        nuevoArt.Id = int.Parse(txtID.Text);
+                        articuloNegocio.modificar(nuevoArt);
+                    }
+
+                    else
+                        // AGREGA EL ARTICULO NUEVO A LA BASE DE DATOS
+                        articuloNegocio.agregar(nuevoArt);
+                    Response.Redirect("listaArt.aspx", false);
                 }
+                catch (Exception ex)
+                {
 
-                else
-                    // AGREGA EL ARTICULO NUEVO A LA BASE DE DATOS
-                    articuloNegocio.agregar(nuevoArt);
-                Response.Redirect("listaArt.aspx", false);
+                    Session.Add("Error", ex);
+                    throw ex;
+                }
             }
-            catch (Exception ex)
+            else
             {
-
-                Session.Add("Error", ex);
-                throw ex;
+                lblCamposVacios.Text = "Verifica que los campos obligatorios no estén vacíos.";
+                obligatorioTextCategoria.Text = "*";
+                obligatorioTextCodigo.Text = "*";
+                obligatorioTextNombre.Text = "*";
+                obligatorioTextPrecio.Text = "*";
+                obligatorioTextDescripcion.Text = "*";
+                obligatorioTextMarca.Text = "*";
             }
         }
 

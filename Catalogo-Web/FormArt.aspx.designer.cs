@@ -33,6 +33,15 @@ namespace Catalogo_Web
         protected global::System.Web.UI.WebControls.TextBox txtID;
 
         /// <summary>
+        /// Control obligatorioTextCodigo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label obligatorioTextCodigo;
+
+        /// <summary>
         /// Control txtCodigo.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace Catalogo_Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCodigo;
+
+        /// <summary>
+        /// Control obligatorioTextNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label obligatorioTextNombre;
 
         /// <summary>
         /// Control txtNombre.
@@ -51,6 +69,15 @@ namespace Catalogo_Web
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
+        /// Control obligatorioTextMarca.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label obligatorioTextMarca;
+
+        /// <summary>
         /// Control ddlMarca.
         /// </summary>
         /// <remarks>
@@ -60,6 +87,15 @@ namespace Catalogo_Web
         protected global::System.Web.UI.WebControls.DropDownList ddlMarca;
 
         /// <summary>
+        /// Control obligatorioTextCategoria.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label obligatorioTextCategoria;
+
+        /// <summary>
         /// Control ddlCategoria.
         /// </summary>
         /// <remarks>
@@ -67,6 +103,15 @@ namespace Catalogo_Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+
+        /// <summary>
+        /// Control obligatorioTextPrecio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label obligatorioTextPrecio;
 
         /// <summary>
         /// Control txtPrecio.
@@ -85,6 +130,24 @@ namespace Catalogo_Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAceptar;
+
+        /// <summary>
+        /// Control lblCamposVacios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCamposVacios;
+
+        /// <summary>
+        /// Control obligatorioTextDescripcion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label obligatorioTextDescripcion;
 
         /// <summary>
         /// Control txtDescripcion.
