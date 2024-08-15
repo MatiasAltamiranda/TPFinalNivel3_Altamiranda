@@ -77,10 +77,7 @@ namespace Catalogo_Web
             }
         }
 
-        protected void txtUrlImagen_TextChanged(object sender, EventArgs e)
-        {
-            cargarImagen();
-        }
+       
 
         public void cargarImagen()
         {
@@ -170,6 +167,11 @@ namespace Catalogo_Web
                 Session.Add("Error", ex);
                 throw ex;
             }
+        }
+
+        protected void txtUrlImagen_TextChanged(object sender, EventArgs e)
+        {
+            cargarImagen();
         }
     }
 }

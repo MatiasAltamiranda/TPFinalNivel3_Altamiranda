@@ -57,7 +57,7 @@
             </div>
         </div>
         <%
-            //CONDICION EVALUA SI SE TRATA DE UN ARTICULI PRECARGADO PARA NO RENDERIZAR BOTON DE ELIMINAR EN EL CASO DE AGREGAR UN PRODUCTO NUEVO
+            //CONDICION EVALUA SI SE TRATA DE UN ARTICULO PRECARGADO PARA NO RENDERIZAR BOTON DE ELIMINAR EN EL CASO DE AGREGAR UN PRODUCTO NUEVO
             if (Request.QueryString["id"] != null)
             { %>
         <div class="row text-end">
