@@ -94,6 +94,11 @@ namespace Catalogo_Web
                 {
                 try
                 {
+                    Page.Validate();
+                    if (!Page.IsValid)
+                        return;
+
+
                     // CREA UN ARTICULO NUEVO Y RELLENA CON LOS DATOS DE LOS TEXTBOX
                     Articulo nuevoArt = new Articulo();
                     ArticuloNegocio articuloNegocio = new ArticuloNegocio();

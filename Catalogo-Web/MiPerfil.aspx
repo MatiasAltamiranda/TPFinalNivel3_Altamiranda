@@ -15,11 +15,11 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Nombre</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtNombre" />
+                    <asp:TextBox MaxLength="50" runat="server" CssClass="form-control" ID="txtNombre" />
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Apellido</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtApellido" />
+                    <asp:TextBox MaxLength="50" runat="server" CssClass="form-control" ID="txtApellido" />
                 </div>
                 <div class="mb-3 mt-5">
                     <asp:Button Text="Guardar" runat="server" CssClass="btn btn-primary" ID="btnGuardar" onclick="btnGuardar_Click"/>

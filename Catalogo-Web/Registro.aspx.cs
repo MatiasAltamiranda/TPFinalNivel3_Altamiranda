@@ -20,6 +20,11 @@ namespace Catalogo_Web
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
+            Page.Validate();
+            if (!Page.IsValid)
+                return;
+
+
             if (!(Validacion.validarTextoVacio(txtEmail.Text) || Validacion.validarTextoVacio(txtPass.Text) || Validacion.validarTextoVacio(txtPassRepet.Text))) {
             if (txtPass.Text == txtPassRepet.Text)
             {
