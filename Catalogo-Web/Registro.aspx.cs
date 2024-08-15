@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
+using Helper;
 using Negocio;
 
 namespace Catalogo_Web
@@ -18,6 +20,7 @@ namespace Catalogo_Web
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
+            if (!(Validacion.validarTextoVacio(txtEmail.Text) || Validacion.validarTextoVacio(txtPass.Text) || Validacion.validarTextoVacio(txtPassRepet.Text))) {
             if (txtPass.Text == txtPassRepet.Text)
             {
 
@@ -44,7 +47,14 @@ namespace Catalogo_Web
             {
                 labelConfirm.Text = "Las contraseñas no coinciden"; 
             }
-
+            }
+            else
+            {
+                labelConfirm.Text = "Verifica que los campos obligatorios no estén vacíos.";
+                obligatorioEmail.Text = "*";
+                obligatorioPass.Text = "*";
+                obligatorioPassRepeat.Text = "*";   
+            }
         }
     }
 }

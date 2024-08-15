@@ -33,6 +33,15 @@ namespace Catalogo_Web
         protected global::System.Web.UI.WebControls.TextBox txtApellido;
 
         /// <summary>
+        /// Control obligatorioEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label obligatorioEmail;
+
+        /// <summary>
         /// Control txtEmail.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace Catalogo_Web
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
+        /// Control obligatorioPass.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label obligatorioPass;
+
+        /// <summary>
         /// Control txtPass.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,15 @@ namespace Catalogo_Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPass;
+
+        /// <summary>
+        /// Control obligatorioPassRepeat.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label obligatorioPassRepeat;
 
         /// <summary>
         /// Control txtPassRepet.

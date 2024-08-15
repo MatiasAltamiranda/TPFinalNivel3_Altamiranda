@@ -21,17 +21,22 @@
 
                 <div class="mb-3 text-start">
                     <label class="form-label fs-5 lead text-white" for="txtEmail">Email</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" TextMode="Email" PlaceHolder="Ingresa tu dirección de correo electronico"></asp:TextBox>
+                    <asp:Label Text="" runat="server" CssClass="text-danger  fw-bold" ID="obligatorioEmail" />
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" TextMode="Email" PlaceHolder="Ingresa tu dirección de correo electronico" required="true"></asp:TextBox>
+
                 </div>
 
                 <div class="mb-4 text-start">
                     <label class="form-label fs-5 lead text-white" for="txtPass">Contraseña</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtPass" PlaceHolder="Ingresa una contraseña" TextMode="Password"></asp:TextBox>
+                    <asp:Label Text="" runat="server" CssClass="text-danger  fw-bold" ID="obligatorioPass" />
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtPass" PlaceHolder="Ingresa una contraseña" TextMode="Password" required="true"></asp:TextBox>
+
                 </div>
 
                 <div class="mb-4 text-start">
                     <label class="form-label fs-5 lead text-white" for="txtPassRepet">Repetir Contraseña</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtPassRepet" PlaceHolder="Repite la contraseña" TextMode="Password"></asp:TextBox>
+                    <asp:Label Text="" runat="server" CssClass="text-danger  fw-bold" ID="obligatorioPassRepeat" />
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtPassRepet" PlaceHolder="Repite la contraseña" TextMode="Password" required="true"></asp:TextBox>
                 </div>
                 <asp:Button Text="Registrarse" runat="server" CssClass="btn btn-light mt-4 w-100 fs-5" ID="btnRegistro" OnClick="btnRegistro_Click" />
             </div>
