@@ -114,15 +114,18 @@ namespace Catalogo_Web
                     //EVALUA SI SE ESTA AGREGANDO O MODIFICANDO UN ARTICULO
 
                     if (Request.QueryString["id"] != null)
-                    // MODIFICA EL ARTICULO EN LA BASE DE DATOS
+                        // MODIFICA EL ARTICULO EN LA BASE DE DATOS
                     {
                         nuevoArt.Id = int.Parse(txtID.Text);
                         articuloNegocio.modificar(nuevoArt);
                     }
 
                     else
-                        // AGREGA EL ARTICULO NUEVO A LA BASE DE DATOS
+                         // AGREGA EL ARTICULO NUEVO A LA BASE DE DATOS
                         articuloNegocio.agregar(nuevoArt);
+                       
+
+
                     Response.Redirect("listaArt.aspx", false);
                 }
                 catch (Exception ex)
